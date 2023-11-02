@@ -43,6 +43,7 @@ public class EmployerController {
                                          Errors errors, Model model) {
 
         if (errors.hasErrors()) {
+            model.addAttribute("title", "Add Employer");
             return "employers/add";
         }
 
@@ -59,7 +60,7 @@ public class EmployerController {
             model.addAttribute("employer", employer);
             return "employers/view";
         } else {
-            return "redirect:../";
+            return "redirect:";
         }
 
     }
